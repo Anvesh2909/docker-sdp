@@ -5,7 +5,7 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: lms_backend_db
-      MYSQL_ROOT_PASSWORD: Anvesh@2909
+      MYSQL_ROOT_PASSWORD: root  # Changed to match backend password
     ports:
       - "3306:3306"
     volumes:
@@ -22,7 +22,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/lms_backend_db
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_DATASOURCE_PASSWORD: root  # Kept as original
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
     depends_on:
       - db
