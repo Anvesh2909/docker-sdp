@@ -5,9 +5,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: lms_backend_db
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: Anvesh@2909
     ports:
-      - "3307:3306"
+      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
     networks:
@@ -27,7 +27,7 @@ services:
     depends_on:
       - db
     ports:
-      - "8082:8080"
+      - "8080:8080"
     networks:
       - lms-net
 
